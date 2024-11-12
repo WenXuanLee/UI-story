@@ -26,3 +26,5 @@ pnpm-debug.log*
 
 # Jest and testing output
 coverage/
+
+*storybook.log
