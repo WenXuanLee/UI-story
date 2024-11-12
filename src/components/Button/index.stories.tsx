@@ -18,5 +18,8 @@ export const Default: Story = {
   args: {
     children: "click me",
     onClick: () => {},
+    variant: "solid",
+    size: 'lg',
+    colorscheme: 'primary',
   }
 }
