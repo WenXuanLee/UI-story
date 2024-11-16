@@ -1,0 +1,131 @@
+import { Meta } from '@storybook/blocks'
+import { ColorPalette, ColorItem } from '@storybook/blocks'
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../tailwind.config.js'
+
+export const fullConfig = resolveConfig(tailwindConfig)
+export const colors = fullConfig.theme.accentColor
+
+<Meta title="System/Colors" />
+# Color Palette
+
+This page showcases the color palette with shades for primary, secondary, neutral, success, warning, and error colors.
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="primary actions and prominent UI elements"
+    colors={{
+      "50": colors.primary[50],
+      "100": colors.primary[100],
+      "200": colors.primary[200],
+      "300": colors.primary[300],
+      "400": colors.primary[400],
+      "500": colors.primary[500],
+      "600": colors.primary[600],
+      "700": colors.primary[700],
+      "800": colors.primary[800],
+      "900": colors.primary[900],
+      "950": colors.primary[950],
+    }}
+  />
+
+  <ColorItem
+    title="Secondary"
+    subtitle="secondary actions and elements"
+    colors={{
+      "50": colors.secondary[50],
+      "100": colors.secondary[100],
+      "200": colors.secondary[200],
+      "300": colors.secondary[300],
+      "400": colors.secondary[400],
+      "500": colors.secondary[500],
+      "600": colors.secondary[600],
+      "700": colors.secondary[700],
+      "800": colors.secondary[800],
+      "900": colors.secondary[900],
+      "950": colors.secondary[950],
+    }}
+  />
+
+  <ColorItem
+    title="Neutral"
+    subtitle="Backgrounds, borders, and typography"
+    colors={{
+      "50": colors.neutral[50],
+      "100": colors.neutral[100],
+      "200": colors.neutral[200],
+      "300": colors.neutral[300],
+      "400": colors.neutral[400],
+      "500": colors.neutral[500],
+      "600": colors.neutral[600],
+      "700": colors.neutral[700],
+      "800": colors.neutral[800],
+      "900": colors.neutral[900],
+      "950": colors.neutral[950],
+    }}
+  />
+
+  <ColorItem
+    title="Success"
+    subtitle="Successful actions or positive states"
+    colors={{
+      "50": colors.success[50],
+      "100": colors.success[100],
+      "200": colors.success[200],
+      "300": colors.success[300],
+      "400": colors.success[400],
+      "500": colors.success[500],
+      "600": colors.success[600],
+      "700": colors.success[700],
+      "800": colors.success[800],
+      "900": colors.success[900],
+      "950": colors.success[950],
+    }}
+  />
+
+  <ColorItem
+    title="Warning"
+    subtitle="Indicates caution or potential issues"
+    colors={{
+      "50": colors.warning[50],
+      "100": colors.warning[100],
+      "200": colors.warning[200],
+      "300": colors.warning[300],
+      "400": colors.warning[400],
+      "500": colors.warning[500],
+      "600": colors.warning[600],
+      "700": colors.warning[700],
+      "800": colors.warning[800],
+      "900": colors.warning[900],
+      "950": colors.warning[950],
+    }}
+  />
+  
+  <ColorItem
+    title="Error"
+    subtitle="Indicates errors or critical issues"
+    colors={{
+      "Error 50": colors.error[50],
+      "Error 100": colors.error[100],
+      "Error 200": colors.error[200],
+      "Error 300": colors.error[300],
+      "Error 400": colors.error[400],
+      "Error 500": colors.error[500],
+      "Error 600": colors.error[600],
+      "Error 700": colors.error[700],
+      "Error 800": colors.error[800],
+      "Error 900": colors.error[900],
+      "Error 950": colors.error[950],
+    }}
+  />
+
+  <ColorItem
+    title="Shades"
+    subtitle="Sometimes just black and white"
+    colors={{
+      "White": colors.white,
+      "Black": colors.black,
+    }}
+  />
+</ColorPalette>
