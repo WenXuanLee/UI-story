@@ -1,0 +1,205 @@
+{/* Typography.mdx */}
+
+import { Meta, Typeset, Unstyled } from '@storybook/blocks';
+
+
+<Meta title="System/Typography" />
+
+# Typography Guide Line
+
+**Weights:** different size will have limited weight options
+- 400 (regular): body, caption, small
+- 500(medium): subheading, small-subheading
+- 600(semi-bold): all sizes
+- 700(bold): all sizes
+- 800(extra-bold): h1, h2, h4
+
+**Size:** Please enusre what kind of text styles applied on the design figma.
+- 28px: h2 
+- 22px: h2 
+- 18px: h3 
+- 16px: h4, subheading, body
+- 14px: small-subheading, caption
+- 12px: small
+
+# All defineded typography
+#### [used className]
+#### [size] / [weights]  
+<br />
+
+<Unstyled>
+<div class="space-y-12">
+  <div>
+    <p class="text-sm text-gray-400">H1 - Page titles, welcoming tone</p>
+    <div class="border-t border-gray-200 my-4"></div>
+    <div class="grid grid-cols-3 gap-4 mt-2">
+      <div>
+        <h1 class="text-h1-semi-bold">text-h1-semi-bold</h1>
+        <p class="text-caption-regular mt-4 text-neutral-400">28px / Semi-Bold</p>
+      </div>
+      <div>
+        <h1 class="text-h1-bold">text-h1-bold</h1>
+        <p class="text-caption-regular mt-4 text-neutral-400">28px / Bold</p>
+      </div>
+      <div>
+        <h1 class="text-h1-extra-bold">text-h1-extra-bold</h1>
+        <p class="text-caption-regular mt-4 text-neutral-400">28px / Extra-Bold</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="text-sm text-gray-400">H2 - Section headers, e.g., “Discover Trips”</p>
+    <div class="border-t border-gray-200 my-4"></div>
+    <div class="grid grid-cols-3 gap-4 mt-2">
+      <div>
+        <h2 class="text-h2-semi-bold">text-h2-semi-bold</h2>
+        <p class="text-caption-regular mt-4 text-neutral-400">22px / Semi-Bold</p>
+      </div>
+      <div>
+        <h2 class="text-h2-bold">text-h2-bold</h2>
+        <p class="text-caption-regular mt-4 text-neutral-400">22px / Bold</p>
+      </div>
+      <div>
+        <h2 class="text-h2-extra-bold">text-h2-extra-bold</h2>
+        <p class="text-caption-regular mt-4 text-neutral-400">22px / Extra-Bold</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="text-sm text-gray-400">H3 - Subsection titles</p>
+    <div class="border-t border-gray-200 my-4"></div>
+    <div class="grid grid-cols-3 gap-4 mt-2">
+      <div>
+        <h3 class="text-h3-semi-bold">text-h3-semi-bold</h3>
+        <p class="text-caption-regular mt-4 text-neutral-400">18px / Semi-Bold</p>
+      </div>
+      <div>
+        <h3 class="text-h3-bold">text-h2-bold</h3>
+        <p class="text-caption-regular mt-4 text-neutral-400">18px / Bold</p>
+      </div>
+      <div>
+        <h3 class="text-h3-extra-bold">text-h3-extra-bold</h3>
+        <p class="text-caption-regular mt-4 text-neutral-400">18px / Extra-Bold</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="text-sm text-gray-400">H4 - Minor headings</p>
+    <div class="border-t border-gray-200 my-4"></div>
+    <div class="grid grid-cols-3 gap-4 mt-2">      
+      <div>
+        <h4 class="text-h4-semi-bold">text-h4-semi-bold</h4>
+        <p class="text-caption-regular mt-4 text-neutral-400">16px / Semi-Bold</p>
+      </div>
+      <div>
+        <h4 class="text-h4-bold">text-h4-bold</h4>
+        <p class="text-caption-regular mt-4 text-neutral-400">16px / Bold</p>
+      </div>
+
+      <div>
+        <h4 class="text-h4-extra-bold">text-h4-extra-bold</h4>
+        <p class="text-caption-regular mt-4 text-neutral-400">16px / Extra-bold</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="text-sm text-gray-400">Subheading - Section dividers, minor callouts</p>
+    <div class="border-t border-gray-200 my-4"></div>
+    <div class="grid grid-cols-3 gap-4 mt-2">
+      <div>
+        <p class="text-subheading-medium">text-subheading-medium</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">16px / Medium</p>
+      </div>
+      <div>
+        <p class="text-subheading-semi-bold">text-subheading-semi-bold</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">16px / Semi-bold</p>
+      </div>
+      <div>
+        <p class="text-subheading-medium">text-subheading-bold</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">16px / Bold</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="text-sm text-gray-400">Small Subheading - Subtle dividers, small groupings</p>
+    <div class="border-t border-gray-200 my-4"></div>
+    <div class="grid grid-cols-3 gap-4 mt-2">
+      <div>
+        <p class="text-small-subheading-medium">text-small-subheading-medium</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">14px / Medium</p>
+      </div>
+      <div>
+        <p class="text-small-subheading-semi-bold">text-small-subheading-semi-bold</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">14px / Semi-bold</p>
+      </div>
+      <div>
+        <p class="text-small-subheading-bold">text-small-subheading-bold</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">14px / Bold</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="text-sm text-gray-400">Body - Main paragraph text</p>
+    <div class="border-t border-gray-200 my-4"></div>
+    <div class="grid grid-cols-3 gap-4 mt-2">
+      <div>
+        <p class="text-body-regular">text-body-regular</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">16px / Regular</p>
+      </div>
+      <div>
+        <p class="text-body-semi-bold">text-body-semi-bold</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">16px / Semi-bold</p>
+      </div>
+      <div>
+        <p class="text-body-bold">text-body-bold</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">16px / Bold</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="text-sm text-gray-400">Caption - Captions, hints, labels</p>
+    <div class="border-t border-gray-200 my-4"></div>
+    <div class="grid grid-cols-3 gap-4 mt-2">
+      <div>
+        <p class="text-caption-regular">text-caption-regular</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">14px / Regular</p>
+      </div>
+      <div>
+        <p class="text-caption-semi-bold">text-caption-semi-bold</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">14px / Semi-bold</p>
+      </div>
+      <div>
+        <p class="text-caption-bold">text-caption-bold</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">14px / Bold</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="text-sm text-gray-400">Small - Minor labels, secondary details</p>
+    <div class="border-t border-gray-200 my-4"></div>
+    <div class="grid grid-cols-3 gap-4 mt-2">
+      <div>
+        <p class="text-small-regular">text-small-regular</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">12px / Regular</p>
+      </div>
+      <div>
+        <p class="text-small-semi-bold">text-small-semi-bold</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">12px / Semi-bold</p>
+      </div>
+      <div>
+        <p class="text-small-bold">text-small-bold</p>
+        <p class="text-caption-regular mt-4 text-neutral-400">12px / Bold</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</Unstyled>

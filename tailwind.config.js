@@ -86,7 +86,52 @@ export default {
           '900': '#520f0f',
           '950': '#410b0b'
         }
-      }      
+      },
+      fontSize: {
+        // heading 1
+        'h1-bold': ['28px', { lineHeight: '1.3', fontWeight: '700' }],
+        'h1-semi-bold': ['28px', { lineHeight: '1.3', fontWeight: '600' }],
+        'h1-extra-bold': ['28px', { lineHeight: '1.3', fontWeight: '800' }],
+        // heading 2
+        'h2-bold': ['22px', { lineHeight: '1.35', fontWeight: '700' }],
+        'h2-semi-bold': ['22px', { lineHeight: '1.35', fontWeight: '600' }],
+        'h2-extra-bold': ['22px', { lineHeight: '1.35', fontWeight: '800' }],
+        // heading 3 
+        'h3-bold': ['18px', { lineHeight: '1.4', fontWeight: '700' }],
+        'h3-semi-bold': ['18px', { lineHeight: '1.4', fontWeight: '600' }],
+        'h3-extra-bold': ['18px', { lineHeight: '1.4', fontWeight: '800' }],
+        // heading 4
+        'h4-bold': ['16px', { lineHeight: '1.5', fontWeight: '700' }],
+        'h4-semi-bold': ['16px', { lineHeight: '1.5', fontWeight: '600' }],
+        'h4-extra-bold': ['16px', { lineHeight: '1.5', fontWeight: '800' }],
+        // subheading
+        'subheading-medium': ['16px', { lineHeight: '1.5', fontWeight: '500' }],
+        'subheading-semi-bold': ['16px', { lineHeight: '1.5', fontWeight: '600' }],
+        'subheading-bold': ['16px', { lineHeight: '1.5', fontWeight: '700' }],
+        // small subheading
+        'small-subheading-medium': ['14px', { lineHeight: '1.4', fontWeight: '500' }],
+        'small-subheading-semi-bold': ['14px', { lineHeight: '1.4', fontWeight: '600' }],
+        'small-subheading-bold': ['14px', { lineHeight: '1.4', fontWeight: '700' }],
+        // body / paragraph 
+        'body-regular': ['16px', { lineHeight: '1.6', fontWeight: '400' }],
+        'body-semi-bold': ['16px', { lineHeight: '1.6', fontWeight: '600' }],
+        'body-bold': ['16px', { lineHeight: '1.6', fontWeight: '700' }],
+        // caption
+        'caption-regular': ['14px', { lineHeight: '1.4', fontWeight: '400' }],
+        'caption-semi-bold': ['14px', { lineHeight: '1.4', fontWeight: '600' }],
+        'caption-bold': ['14px', { lineHeight: '1.4', fontWeight: '700' }],
+        // small
+        'small-regular': ['12px', { lineHeight: '1.6', fontWeight: '400' }],
+        'small-semi-bold': ['12px', { lineHeight: '1.6', fontWeight: '600' }],
+        'small-bold': ['12px', { lineHeight: '1.6', fontWeight: '700' }],
+      },
+      fontWeight: {
+        regular: 400,
+        medium: 500,
+        semiBold: 600,
+        bold: 700,
+        extraBold: 800,
+      },     
     },
   },
   plugins: [],
