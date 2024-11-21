@@ -1,0 +1,162 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Styleguide/Spacing" />
+
+# Spacing Guidelines
+
+The spacing system ensures consistent padding, margins, and gaps throughout the design. Each spacing value has specific use cases, providing flexibility while maintaining visual harmony. All spacing values are based on a **4px scale** for simplicity and precision.
+
+---
+
+## Quick Reference Table
+
+Use this table to quickly navigate to specific spacing values and their use cases:
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Use Cases</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4px</td>
+      <td>Text padding, small icons, minor gaps</td>
+      <td><a href="#4px">Go to 4px</a></td>
+    </tr>
+    <tr>
+      <td>8px</td>
+      <td>Small button padding, badge gaps</td>
+      <td><a href="#8px">Go to 8px</a></td>
+    </tr>
+    <tr>
+      <td>16px</td>
+      <td>Default component padding (cards, modals)</td>
+      <td><a href="#16px">Go to 16px</a></td>
+    </tr>
+    <tr>
+      <td>24px</td>
+      <td>Medium gaps between components</td>
+      <td><a href="#24px">Go to 24px</a></td>
+    </tr>
+    <tr>
+      <td>32px</td>
+      <td>Gaps in grids, section spacing</td>
+      <td><a href="#32px">Go to 32px</a></td>
+    </tr>
+    <tr>
+      <td>40px</td>
+      <td>Space between sections</td>
+      <td><a href="#40px">Go to 40px</a></td>
+    </tr>
+    <tr>
+      <td>48px</td>
+      <td>Outer padding for containers</td>
+      <td><a href="#48px">Go to 48px</a></td>
+    </tr>
+    <tr>
+      <td>64px</td>
+      <td>Major section spacing, page layout gaps</td>
+      <td><a href="#64px">Go to 64px</a></td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Spacing Scale and Use Cases
+
+### <a id="4px"></a>4px
+- **Purpose**: Fine-tuning spacing in smaller components.
+- **Examples**:
+  - Padding inside small buttons.
+  - Space between text and icons.
+  - Small adjustments in layout alignment.
+- **Tailwind Class**: `p-1`, `m-1`, `gap-1`.
+
+---
+
+### <a id="8px"></a>8px
+- **Purpose**: Small gaps between compact elements.
+- **Examples**:
+  - Horizontal spacing between buttons in a group.
+  - Padding inside badges or pill components.
+- **Tailwind Class**: `p-2`, `m-2`, `gap-2`.
+
+---
+
+### <a id="16px"></a>16px
+- **Purpose**: Default padding and margins for most components.
+- **Examples**:
+  - Padding inside cards, modals, or input fields.
+  - Margins between cards or content blocks.
+- **Tailwind Class**: `p-4`, `m-4`, `gap-4`.
+
+---
+
+### <a id="24px"></a>24px
+- **Purpose**: Comfortable spacing for medium-sized components.
+- **Examples**:
+  - Spacing between cards in a grid layout.
+  - Padding around section headers or feature blocks.
+- **Tailwind Class**: `p-6`, `m-6`, `gap-6`.
+
+---
+
+### <a id="32px"></a>32px
+- **Purpose**: Spacing for grouping components or sections.
+- **Examples**:
+  - Gaps between rows in a grid or flex layout.
+  - Outer margins for hero sections or page content.
+- **Tailwind Class**: `p-8`, `m-8`, `gap-8`.
+
+---
+
+### <a id="40px"></a>40px
+- **Purpose**: Spacing between larger sections of a page.
+- **Examples**:
+  - Padding for promotional banners or feature blocks.
+  - Space between grouped form fields in long forms.
+- **Tailwind Class**: `p-10`, `m-10`, `gap-10`.
+
+---
+
+### <a id="48px"></a>48px
+- **Purpose**: Separation between major sections.
+- **Examples**:
+  - Padding around large containers or page layouts.
+  - Gaps between homepage sections.
+- **Tailwind Class**: `p-12`, `m-12`, `gap-12`.
+
+---
+
+### <a id="64px"></a>64px
+- **Purpose**: Spacious gaps for clean, minimalist layouts.
+- **Examples**:
+  - Margins between distinct sections on large screens.
+  - Outer padding for full-width layouts.
+- **Tailwind Class**: `p-16`, `m-16`, `gap-16`.
+
+---
+
+## How to Apply Spacing
+
+Spacing values are applied using Tailwind utility classes for padding (`p`), margin (`m`), and gaps (`gap`). These can be used on any HTML element to enforce consistent spacing.
+
+### Example Code
+
+```html
+<!-- Button Padding -->
+<button class="px-4 py-2">Button</button> <!-- 16px Horizontal, 8px Vertical -->
+
+<!-- Card Padding -->
+<div class="p-6">Card Content</div> <!-- 24px Padding -->
+
+<!-- Grid Gaps -->
+<div class="grid grid-cols-3 gap-8"> <!-- 32px Gap -->
+  <div>Card 1</div>
+  <div>Card 2</div>
+  <div>Card 3</div>
+</div>
