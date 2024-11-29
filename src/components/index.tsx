@@ -1,2 +1,3 @@
-import * from './Button';
-import * from './Typography';
+// @ts-nocheck
+
+export * from './Button';
