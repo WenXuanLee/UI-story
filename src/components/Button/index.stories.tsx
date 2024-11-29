@@ -21,9 +21,10 @@ type Story = StoryObj<typeof Button>;
 const Template: StoryFn = (args) => (
   <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
     <Button variant="primary" {...args}>Primary</Button>
-    <Button variant="secondary">Secondary</Button>
-    <Button variant="outline">Tertiary</Button>
-    <Button variant="text">Accent</Button>
+    <Button variant="secondary" {...args}>Secondary</Button>
+    <Button variant="outline" {...args}>Outline</Button>
+    <Button variant="text" {...args}>Text</Button>
+    <Button variant="error" {...args}>Error</Button>
   </div>
 );
 
@@ -62,6 +63,15 @@ export const Text: Story = {
     variant: "text",
     size: "md",
     children: "Text Button",
+  }
+};
+
+export const Error: Story = {
+  args: {
+    variant: "error",
+    size: "md",
+    disabled: false,
+    children: "Error Button",
   }
 };
 

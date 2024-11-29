@@ -15,16 +15,66 @@ A button is ...
 
 <Controls />
 
-## Stories
+## Button Guidelines
 
 ### Primary
 
-A button can be of primary importance.
+- Purpose: The main call-to-action (CTA) on a page.
+- Use Cases:
+  - Submitting forms.
+  - Proceeding to the next step in a flow.
+- Best Practices:
+  - Use only one primary button per page to avoid confusion.
+  - Ensure it is visually distinct from secondary buttons.
 
 <Story of={ButtonStories.Primary} />
 
-A button can be of secondary importance.
+### Secondary
+
+- Purpose: Alternative actions that are not the primary focus but still important.
+- Use Cases:
+  - "Cancel" or "Back" actions.
+  - Supporting actions near the primary button.
+- Best Practices:
+  - Use in conjunction with a primary button, ensuring it is less visually prominent.
+  - Avoid using secondary buttons as standalone CTAs.
 
 <Story of={ButtonStories.Secondary} />
 
-{/* ... */}
+### Outline
+
+- Purpose: For less prominent actions, often contextual.
+- Use Cases:
+  - Actions where users need additional context (e.g., "Learn More").
+  - Lightweight options compared to primary/secondary buttons.
+- Best Practices:
+  - Use only when the action is not critical.
+  -Ensure enough contrast between the button and the background for readability.
+
+<Story of={ButtonStories.Outline} />
+
+### Text
+
+- Purpose: Minimalist actions that are typically inline or lightweight.
+- Use Cases:
+  - Non-intrusive actions like "Skip" or "View Details."
+  - Actions embedded in a paragraph or other UI elements.
+- Best Practices:
+  - Avoid overusing text buttons as they are less visually prominent.
+  - Always ensure proper contrast with the background.
+
+<Story of={ButtonStories.Text} />
+
+### Error
+
+- Purpose: Draws attention to critical or destructive actions.
+- Use Cases:
+  - Deleting accounts or items.
+  - Confirming irreversible operations.
+- Best Practices:
+  - Use sparingly to avoid overwhelming the user.
+  - Always pair with confirmation dialogs or warnings for clarity.
+  - Make it visually distinct from other button types.
+
+<Story of={ButtonStories.Error} />
+

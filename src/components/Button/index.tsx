@@ -20,6 +20,7 @@ const buttonStyles = cva(
         secondary: "border bg-neutral-50 text-primary-500 border-primary-500 hover:text-primary-600 hover:border-primary-600 active:border-primary-700 active:text-primary-700 hover:bg-neutral-100 active:bg-neutral-200",
         outline: "border bg-transparent border-primary-500 text-primary-500 hover:text-primary-600 hover:border-primary-600 active:border-primary-700 active:text-primary-700",
         text: "bg-transparent text-primary-500 hover:text-primary-600 active:text-primary-700",
+        error: "text-white bg-error-500 hover:bg-error-600 active:bg-error-700",
       },
       size: {
         sm: "px-3 py-2 text-sm",
@@ -55,6 +56,11 @@ const buttonStyles = cva(
         variant: "text",
         disabled: true,
         className: "text-neutral-400 bg-transparent hover:text-neutral-400 active:text-neutral-400",
+      },
+      {
+        variant: "error",
+        disabled: true,
+        className: "text-white bg-error-200 hover:bg-error-200 active:bg-error-200",
       },
     ],
     defaultVariants: {
