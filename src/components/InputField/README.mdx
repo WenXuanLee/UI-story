@@ -1,0 +1,167 @@
+import { Meta, Primary, Controls, Unstyled, Story } from '@storybook/blocks';
+import * as InputFieldStories from './index.stories';
+
+<Meta of={InputFieldStories} />
+
+# Input Field
+
+An input field is a fundamental form component used for text input. It supports different sizes, states, icons, and validation messages.
+
+## Best Practices
+
+- Always use a **label** to describe the input field.
+- Use **placeholder text** sparingly. It should not replace labels.
+- Show **error messages** inline to help users correct mistakes quickly.
+- Use **icons** to enhance usability but avoid unnecessary clutter.
+- Maintain consistent spacing and sizes across all input fields.
+
+---
+
+<Primary />
+
+## Props
+
+<Controls />
+
+---
+
+## Input Field Guidelines
+
+### Default State
+
+- **Purpose**: For users to input standard text.
+- **Use Cases**:
+  - Collecting names, email addresses, or short text-based input.
+- **Best Practices**:
+  - Keep placeholder text clear and concise.
+  - Always pair an input field with a descriptive label for accessibility.
+
+<Story of={InputFieldStories.Default} />
+
+
+
+### Error State
+
+- **Purpose**: Indicates that the input is invalid or incorrect.
+- **Use Cases**:
+  - Required fields left empty.
+  - Invalid format (e.g., invalid email, incorrect password).
+- **Best Practices**:
+  - Display a clear and actionable error message.
+  - Use a visually distinct border and text color (e.g., red) for errors.
+
+<Story of={InputFieldStories.ErrorState} />
+
+
+### Disabled State
+
+- **Purpose**: Prevents user interaction.
+- **Use Cases**:
+  - Fields temporarily unavailable due to form logic or permissions.
+- **Best Practices**:
+  - Use a muted color to signify the disabled state.
+  - Ensure users understand why the field is disabled.
+
+<Story of={InputFieldStories.Disabled} />
+
+
+### Input with Icons
+
+- **Purpose**: Enhances usability with visual indicators.
+- **Use Cases**:
+  - **Prefix Icons**: For search, email, or password fields.
+  - **Suffix Icons**: For clear actions like toggling visibility or clearing the input.
+- **Best Practices**:
+  - Ensure icons are aligned and maintain consistent spacing.
+  - Avoid using too many icons that could clutter the field.
+
+<Unstyled>
+<div className="flex flex-col gap-8">
+  <Story of={InputFieldStories.WithPrefixIcon} />
+
+  <Story of={InputFieldStories.WithSuffixIcon} />
+</div>
+</Unstyled>
+
+### Input with Hint Message
+
+- **Purpose**: Provides inline validation feedback to guide users.
+- **Use Cases**:
+  - Display error or success states dynamically based on user input.
+- **Best Practices**:
+  - Pair validation states with clear error or hint messages.
+  - Keep validation messages concise and actionable.
+
+<Story of={InputFieldStories.WithHintMessage} />
+
+### Sizes
+
+- **Purpose**: Adjusts the input field dimensions based on design needs.
+- **Sizes**:
+  - **Small**: Compact inputs for dense forms.
+  - **Medium**: Standard size for most use cases.
+  - **Large**: Prominent inputs for high-importance fields.
+
+---
+
+### Props Overview
+
+<Unstyled>
+<div class="overflow-x-auto">
+  <table class="min-w-full table-auto border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+        <th class="border border-gray-200 px-4 py-2 text-left">Prop</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Type</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Default</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Description</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700 text-sm">
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono">`size`</td>
+        <td class="border border-gray-200 px-4 py-2">"sm" | "md" | "lg"</td>
+        <td class="border border-gray-200 px-4 py-2">"md"</td>
+        <td class="border border-gray-200 px-4 py-2">Defines the size of the input field.</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono">`state`</td>
+        <td class="border border-gray-200 px-4 py-2">"default" | "error" | "success"</td>
+        <td class="border border-gray-200 px-4 py-2">"default"</td>
+        <td class="border border-gray-200 px-4 py-2">Sets the state of the input field.</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono">`placeholder`</td>
+        <td class="border border-gray-200 px-4 py-2">string</td>
+        <td class="border border-gray-200 px-4 py-2">-</td>
+        <td class="border border-gray-200 px-4 py-2">Text to display when input is empty.</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono">`label`</td>
+        <td class="border border-gray-200 px-4 py-2">string</td>
+        <td class="border border-gray-200 px-4 py-2">-</td>
+        <td class="border border-gray-200 px-4 py-2">Displays a label above the input field.</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono">`prefixIcon`</td>
+        <td class="border border-gray-200 px-4 py-2">ReactNode</td>
+        <td class="border border-gray-200 px-4 py-2">-</td>
+        <td class="border border-gray-200 px-4 py-2">Adds an icon to the left of the input.</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono">`suffixIcon`</td>
+        <td class="border border-gray-200 px-4 py-2">ReactNode</td>
+        <td class="border border-gray-200 px-4 py-2">-</td>
+        <td class="border border-gray-200 px-4 py-2">Adds an icon to the right of the input.</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono">`hintMessage`</td>
+        <td class="border border-gray-200 px-4 py-2">string</td>
+        <td class="border border-gray-200 px-4 py-2">-</td>
+        <td class="border border-gray-200 px-4 py-2">Displays a hint or error message.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</Unstyled>

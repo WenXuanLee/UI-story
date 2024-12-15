@@ -1,4 +1,4 @@
-import{j as s}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as i}from"./index-BrnU7xv7.js";import{ae as r,af as d}from"./index-i-NztDqp.js";import"./index-DJO9vBfz.js";import"./iframe-BLnLrxy5.js";import"../sb-preview/runtime.js";import"./index-DJdX7xnk.js";import"./index-j_8AUxV0.js";import"./index-DrFu-skq.js";function t(l){const e={h1:"h1",h4:"h4",li:"li",p:"p",strong:"strong",ul:"ul",...i(),...l.components};return s.jsxs(s.Fragment,{children:[`
+import{j as s}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as i}from"./index-BrnU7xv7.js";import{ae as r,af as d}from"./index-CyXllV3E.js";import"./index-DJO9vBfz.js";import"./iframe-kuyyeEtj.js";import"../sb-preview/runtime.js";import"./index-DJdX7xnk.js";import"./index-j_8AUxV0.js";import"./index-DrFu-skq.js";function t(l){const e={h1:"h1",h4:"h4",li:"li",p:"p",strong:"strong",ul:"ul",...i(),...l.components};return s.jsxs(s.Fragment,{children:[`
 `,`
 `,s.jsx(r,{title:"System/Typography"}),`
 `,s.jsx(e.h1,{id:"typography-guide-line",children:"Typography Guide Line"}),`
