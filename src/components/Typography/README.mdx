@@ -1,0 +1,177 @@
+import { Meta, Primary, Controls, Unstyled, Story } from '@storybook/blocks';
+import * as TypographyStories from './index.stories';
+import Typography from './';
+
+<Meta of={TypographyStories} />
+
+# Typography
+
+The Typography component provides a consistent and flexible way to manage text styles across your UI library. It supports different **types** (e.g., headings, body text, captions), **states** (e.g., error, success), and **weights** for various use cases and design consistency.
+
+## **Best Practices**
+
+1. **Use `h1` only for primary page titles**. Avoid skipping heading levels for SEO.
+2. Use **dynamic states** like `error` or `success` for feedback messages.
+3. Keep **weights** (e.g., `semiBold`, `bold`) consistent for headings and subheadings.
+
+---
+
+<Primary />
+
+## Props
+
+<Controls />
+
+---
+
+### Typography Type Spec and Scenarios
+
+<Unstyled>
+<div class="overflow-x-auto">
+  <table class="min-w-full table-auto border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+        <th class="border border-gray-200 px-4 py-2 text-left">Type</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Default</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Description</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Usage Scenarios</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700 text-sm">
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>h1</code></td>
+        <td class="border border-gray-200 px-4 py-2"><code>h1</code></td>
+        <td class="border border-gray-200 px-4 py-2">Largest heading for page titles or major sections</td>
+        <td class="border border-gray-200 px-4 py-2">Page titles, hero text, prominent calls to action</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>h2</code></td>
+        <td class="border border-gray-200 px-4 py-2"><code>h2</code></td>
+        <td class="border border-gray-200 px-4 py-2">Section headers, slightly smaller than H1</td>
+        <td class="border border-gray-200 px-4 py-2">Key sections on a page</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>h3</code></td>
+        <td class="border border-gray-200 px-4 py-2"><code>h3</code></td>
+        <td class="border border-gray-200 px-4 py-2">Subsections under H2, medium importance.</td>
+        <td class="border border-gray-200 px-4 py-2">Card titles, modal headings</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>h4</code></td>
+        <td class="border border-gray-200 px-4 py-2"><code>h4</code></td>
+        <td class="border border-gray-200 px-4 py-2">Smaller headings for fine-grained titles</td>
+        <td class="border border-gray-200 px-4 py-2">UI element headings, labels</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>subHeading</code></td>
+        <td class="border border-gray-200 px-4 py-2"><code>h5</code></td>
+        <td class="border border-gray-200 px-4 py-2">Subtle headings, smaller than H4.</td>
+        <td class="border border-gray-200 px-4 py-2">Group titles, section introductions</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>body</code></td>
+        <td class="border border-gray-200 px-4 py-2"><code>p</code></td>
+        <td class="border border-gray-200 px-4 py-2">Standard text for paragraphs and regular content.</td>
+        <td class="border border-gray-200 px-4 py-2">Body text for articles, forms, and cards</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>caption</code></td>
+        <td class="border border-gray-200 px-4 py-2"><code>SpamIcon={}</code></td>
+        <td class="border border-gray-200 px-4 py-2">Small text for captions or additional hints.</td>
+        <td class="border border-gray-200 px-4 py-2">Field labels, helper texts</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>small</code></td>
+        <td class="border border-gray-200 px-4 py-2"><code>small</code></td>
+        <td class="border border-gray-200 px-4 py-2">Very small text for fine print or disclaimers.</td>
+        <td class="border border-gray-200 px-4 py-2">Footnotes, disclaimers, timestamps</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</Unstyled>
+
+
+## Typography States Spec
+
+The Typography component supports **dynamic states** to adapt the text color based on context.
+
+<Unstyled>
+<div class="overflow-x-auto">
+  <table class="min-w-full table-auto border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+        <th class="border border-gray-200 px-4 py-2 text-left">State</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Color</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Usage Scenarios</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700 text-sm">
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>default</code></td>
+        <td class="border border-gray-200 px-4 py-2">text-text-black</td>
+        <td class="border border-gray-200 px-4 py-2">Standard text color for normal content.</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>primary</code></td>
+        <td class="border border-gray-200 px-4 py-2">text-primary-600</td>
+        <td class="border border-gray-200 px-4 py-2">Highlighted text for emphasis or focus.</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>error</code></td>
+        <td class="border border-gray-200 px-4 py-2">text-error-500</td>
+        <td class="border border-gray-200 px-4 py-2">Validation errors or critical messages.</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>success</code></td>
+        <td class="border border-gray-200 px-4 py-2">text-success-500</td>
+        <td class="border border-gray-200 px-4 py-2">Indicates positive outcomes or actions.</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>warning</code></td>
+        <td class="border border-gray-200 px-4 py-2">text-warning-500</td>
+        <td class="border border-gray-200 px-4 py-2">Cautionary text requiring attention.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</Unstyled>
+
+### Font Weights
+
+<Unstyled>
+<div class="overflow-x-auto">
+  <table class="min-w-full table-auto border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+        <th class="border border-gray-200 px-4 py-2 text-left">Weight</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Description</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700 text-sm">
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>regular</code></td>
+        <td class="border border-gray-200 px-4 py-2">Default weight, used for standard body text.</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>medium</code></td>
+        <td class="border border-gray-200 px-4 py-2">Slightly bolder for semi-highlighted text.</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>semiBold</code></td>
+        <td class="border border-gray-200 px-4 py-2">Bold weight, suitable for headings and subheadings.</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>bold</code></td>
+        <td class="border border-gray-200 px-4 py-2">Strong emphasis, used for H1–H3 headings.</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>extraBold</code></td>
+        <td class="border border-gray-200 px-4 py-2">Maximum emphasis for critical text.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</Unstyled>
+
