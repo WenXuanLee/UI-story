@@ -1,0 +1,110 @@
+import { Meta, Primary, Controls, Unstyled, Story } from '@storybook/blocks';
+import * as RadioButtonStories from './index.stories';
+import { RadioGroup } from './RadioGroup';
+
+<Meta of={RadioButtonStories} />
+
+# Radio Button
+
+The **Radio Button** component allows users to select **one option from a set**. It’s commonly used in forms where a single selection is required, such as choosing a **payment method**, **subscription plan**, or **filtering options**.
+
+---
+
+## **Best Practices**
+1. **Use Radio Buttons when only one option can be selected** from a group.
+2. **Keep labels short and clear** so users can easily understand the choices.
+3. **Ensure the selected option is clearly visible** with contrast against unselected states.
+4. **Avoid using Radio Buttons for binary choices**; use a **Toggle (Switch)** or **Checkbox** instead.
+
+---
+
+<Primary />
+
+## **Props**
+
+<Controls />
+
+---
+
+## **Radio Button Variants & States**
+The Radio Button component supports **different sizes** and **states** to ensure flexibility across UI designs.
+
+<Unstyled>
+<div class="overflow-x-auto">
+  <table class="min-w-full table-auto border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+        <th class="border border-gray-200 px-4 py-2 text-left">State</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Border Color</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Inner Dot Color</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Label Color</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700 text-sm">
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>Default</code></td>
+        <td class="border border-gray-200 px-4 py-2">#89909e (neutral-500)</td>
+        <td class="border border-gray-200 px-4 py-2">None</td>
+        <td class="border border-gray-200 px-4 py-2">#26292d (neutral-900)</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>Checked</code></td>
+        <td class="border border-gray-200 px-4 py-2">#028090 (primary-500)</td>
+        <td class="border border-gray-200 px-4 py-2">#FFFFFF</td>
+        <td class="border border-gray-200 px-4 py-2">#26292d (neutral-900)</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>Hover</code></td>
+        <td class="border border-gray-200 px-4 py-2">#4eb6be (primary-300)</td>
+        <td class="border border-gray-200 px-4 py-2">None</td>
+        <td class="border border-gray-200 px-4 py-2">#26292d (neutral-900)</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>Focus</code></td>
+        <td class="border border-gray-200 px-4 py-2">#028090 (primary-500) (2px outline)</td>
+        <td class="border border-gray-200 px-4 py-2">None</td>
+        <td class="border border-gray-200 px-4 py-2">#26292d (neutral-900)</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>Disabled</code></td>
+        <td class="border border-gray-200 px-4 py-2">#c2cad1 (neutral-300)</td>
+        <td class="border border-gray-200 px-4 py-2">None</td>
+        <td class="border border-gray-200 px-4 py-2">#a5adb8 (neutral-400)</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>Error</code></td>
+        <td class="border border-gray-200 px-4 py-2">#d62828 (error-500)</td>
+        <td class="border border-gray-200 px-4 py-2">None</td>
+        <td class="border border-gray-200 px-4 py-2">#d62828 (error-500)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</Unstyled>
+
+---
+
+## **Usage Example: Radio Group**
+For most use cases, **Radio Buttons** should be used inside a `RadioGroup` component.
+
+<Story name="RadioGroupExample" />
+
+### **Code Example**
+```tsx
+import { RadioGroup } from "./RadioGroup";
+
+export const ExampleUsage = () => {
+  return (
+    <RadioGroup
+      name="subscription"
+      options={[
+        { label: "Basic Plan", value: "basic" },
+        { label: "Standard Plan", value: "standard" },
+        { label: "Premium Plan", value: "premium" },
+      ]}
+      defaultValue="standard"
+      size="md"
+      state="default"
+    />
+  );
+};
