@@ -1,0 +1,143 @@
+import { Meta, Primary, Controls, Unstyled, Story } from '@storybook/blocks';
+import * as ChipStories from './index.stories';
+import { Chip } from './';
+
+<Meta of={ChipStories} />
+
+# Chips
+
+The **Chips** component is a compact, interactive UI element used for filtering, tagging, or indicating selections.  
+It supports **different styles, sizes, icons, and removable options**.
+
+---
+
+## **Best Practices**
+1. **Use Chips to represent selections or filters.** Avoid using them for critical actions.
+2. **Ensure sufficient padding and spacing** between multiple chips.
+3. **Clickable chips should have visual feedback** when hovered or focused.
+4. **Removable chips should always have a clear close (`✖`) button.**
+5. **Use outlined variants for a less prominent look** when appropriate.
+
+---
+
+<Primary />
+
+## **Props**
+
+<Controls />
+
+---
+
+## **Chips Variants & States**
+
+<Unstyled>
+<div class="overflow-x-auto">
+  <table class="min-w-full table-auto border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+        <th class="border border-gray-200 px-4 py-2 text-left">Variant</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Filled Style</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Outlined Style</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700 text-sm">
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>primary</code></td>
+        <td class="border border-gray-200 px-4 py-2 bg-primary-500 text-white">Primary Filled</td>
+        <td class="border border-gray-200 px-4 py-2 border-primary-500 text-primary-500">Primary Outlined</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>secondary</code></td>
+        <td class="border border-gray-200 px-4 py-2 bg-neutral-500 text-white">Secondary Filled</td>
+        <td class="border border-gray-200 px-4 py-2 border-neutral-500 text-neutral-500">Secondary Outlined</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>success</code></td>
+        <td class="border border-gray-200 px-4 py-2 bg-green-500 text-white">Success Filled</td>
+        <td class="border border-gray-200 px-4 py-2 border-green-500 text-green-500">Success Outlined</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>warning</code></td>
+        <td class="border border-gray-200 px-4 py-2 bg-yellow-500 text-white">Warning Filled</td>
+        <td class="border border-gray-200 px-4 py-2 border-yellow-500 text-yellow-500">Warning Outlined</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>error</code></td>
+        <td class="border border-gray-200 px-4 py-2 bg-red-500 text-white">Error Filled</td>
+        <td class="border border-gray-200 px-4 py-2 border-red-500 text-red-500">Error Outlined</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</Unstyled>
+
+---
+
+## **Usage Example: Clickable Chips**
+Clicking on a Chip can trigger an action, such as filtering a list.
+
+<Story name="Clickable" />
+
+### **Code Example**
+```tsx
+<Chip label="Clickable Chip" variant="primary" onClick={() => alert("Chip clicked!")} />
+```
+
+---
+
+## **Removable Chips**
+Chips can be removable by adding the `removable` prop.
+
+<Story name="ClickableRemovable" />
+
+### **Code Example**
+```tsx
+<Chip label="Removable Chip" variant="primary" removable onRemove={() => alert("Chip removed!")} />
+```
+
+---
+
+## **Chips Sizes**
+The Chips component supports **three sizes**.
+
+<Unstyled>
+<div class="overflow-x-auto">
+  <table class="min-w-full table-auto border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+        <th class="border border-gray-200 px-4 py-2 text-left">Size</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Height</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Text Size</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700 text-sm">
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>sm</code></td>
+        <td class="border border-gray-200 px-4 py-2">24px</td>
+        <td class="border border-gray-200 px-4 py-2">14px</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>md</code></td>
+        <td class="border border-gray-200 px-4 py-2">32px</td>
+        <td class="border border-gray-200 px-4 py-2">16px</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>lg</code></td>
+        <td class="border border-gray-200 px-4 py-2">40px</td>
+        <td class="border border-gray-200 px-4 py-2">18px</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</Unstyled>
+
+---
+
+## **Conclusion**
+The **Chips component** is useful for tagging, filtering, and selection indicators.  
+For best results:
+- **Use outlined variants for subtle UI elements**.
+- **Ensure removable chips have an `✖` button** for easy deletion.
+- **Make sure chips have enough spacing when used in groups.**
+
+
