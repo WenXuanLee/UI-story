@@ -1,0 +1,79 @@
+import { Meta, Primary, Controls, Unstyled, Story } from '@storybook/blocks';
+import * as SwitchStories from './index.stories';
+import { Switch } from './';
+
+<Meta of={SwitchStories} />
+
+# Switch (Toggle)
+
+The **Switch component** allows users to toggle between two states, typically **ON** and **OFF**.
+
+---
+
+## **Best Practices**
+1. **Use Switches for binary state changes** (e.g., Enable/Disable settings).
+2. **Avoid using switches for actions** that require confirmation.
+3. **Use labels** to provide context for what the toggle controls.
+4. **Ensure accessibility** so users can toggle via **keyboard (Space / Enter)**.
+5. **Use a disabled state** when the switch should not be interacted with.
+
+---
+
+<Primary />
+
+## Props
+
+<Controls />
+
+---
+
+## **Switch Variants**
+The Switch component supports **different sizes** and states.
+
+<Unstyled>
+<div class="overflow-x-auto">
+  <table class="min-w-full table-auto border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+        <th class="border border-gray-200 px-4 py-2 text-left">Size</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Height</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Width</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Label Type</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700 text-sm">
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>sm</code></td>
+        <td class="border border-gray-200 px-4 py-2">16px</td>
+        <td class="border border-gray-200 px-4 py-2">32px</td>
+        <td class="border border-gray-200 px-4 py-2">small</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>md</code></td>
+        <td class="border border-gray-200 px-4 py-2">24px</td>
+        <td class="border border-gray-200 px-4 py-2">48px</td>
+        <td class="border border-gray-200 px-4 py-2">caption</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2 font-mono"><code>lg</code></td>
+        <td class="border border-gray-200 px-4 py-2">32px</td>
+        <td class="border border-gray-200 px-4 py-2">64px</td>
+        <td class="border border-gray-200 px-4 py-2">body</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</Unstyled>
+
+---
+
+## **Usage Example: Controlled Switch**
+The switch state can be **controlled externally** by passing the `checked` prop.
+
+<Story name="Controlled" />
+
+### **Code Example**
+```tsx
+const [checked, setChecked] = React.useState(true);
+
+<Switch label="Controlled Switch" checked={checked} onChange={setChecked} />;
