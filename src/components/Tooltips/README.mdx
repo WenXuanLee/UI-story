@@ -1,0 +1,60 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as TooltipStories from './index.stories';
+import { Tooltip } from './';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+The **Tooltip component** is used to display small contextual information when users hover over an element. It supports **dynamic positioning** and automatically adjusts based on content length.
+
+---
+
+## **Best Practices**
+✅ Keep tooltips **short and concise** to avoid overwhelming users.  
+✅ Use tooltips for **additional hints**, not for essential information.  
+✅ Ensure tooltips are **close to the element they describe**.  
+✅ Set a **`maxWidth`** for tooltips to ensure proper readability.  
+✅ **Long words will wrap automatically** to prevent overflow issues.  
+
+---
+
+<Primary />
+
+## Props
+
+<Controls />
+
+---
+
+## **Tooltip Positions**
+The Tooltip component supports four placement options:
+
+### **Top**
+<Story of="Default" />
+
+### **Bottom**
+<Story of={TooltipStories.Bottom} />
+
+### **Left**
+<Story of={TooltipStories.Left} />
+
+### **Right**
+<Story of={TooltipStories.Right} />
+
+---
+
+---
+
+## **Handling Long Text in Tooltips**
+Tooltips **automatically wrap long text** to ensure they fit within the maximum width.
+
+<Story of={TooltipStories.CustomWidth} />
+
+---
+
+## **Usage Example**
+```tsx
+<Tooltip content="This is a tooltip" position="top">
+  <button>Hover me</button>
+</Tooltip>

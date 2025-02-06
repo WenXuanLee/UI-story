@@ -27,7 +27,7 @@ export const switchStyles = cva(
 );
 
 export const knobStyles = cva(
-  "rounded-full bg-white transition-transform",
+  "absolute rounded-full bg-white transition-transform",
   {
     variants: {
       size: {
