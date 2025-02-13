@@ -1,0 +1,90 @@
+import { Meta, Story, Unstyled, Controls } from '@storybook/blocks';
+import * as AvatarStories from './index.stories';
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+The **Avatar component** is used to display a user’s profile image, initials, or a fallback icon. It supports multiple sizes, shapes, and an optional status indicator to represent online/offline status.
+
+---
+
+## **Best Practices**
+
+1. **Use images whenever possible** to provide a clear user identity.  
+2. **Fallback to initials or an icon** for users without a profile image.  
+3. **Status indicators** are useful for representing user presence.
+
+---
+
+<Story name="Default" />
+
+## **Props**
+
+<Controls />
+
+---
+
+## **Avatar Sizes and Shapes**
+
+<Story name="WithInitials" />
+
+The Avatar supports three sizes: `sm`, `md`, and `lg`. The default size is `md`. You can also choose between `circle` and `square` shapes.
+<Unstyled>
+<table class="min-w-full table-auto border-collapse border border-gray-200">
+  <thead>
+    <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+      <th class="border border-gray-200 px-4 py-2 text-left">Size</th>
+      <th class="border border-gray-200 px-4 py-2 text-left">Dimensions</th>
+      <th class="border border-gray-200 px-4 py-2 text-left">Font Size for Initials</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700 text-sm">
+    <tr>
+      <td class="border border-gray-200 px-4 py-2"><code>sm</code></td>
+      <td class="border border-gray-200 px-4 py-2">32px</td>
+      <td class="border border-gray-200 px-4 py-2">12px</td>
+    </tr>
+    <tr class="bg-gray-50">
+      <td class="border border-gray-200 px-4 py-2"><code>md</code></td>
+      <td class="border border-gray-200 px-4 py-2">48px</td>
+      <td class="border border-gray-200 px-4 py-2">16px</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-200 px-4 py-2"><code>lg</code></td>
+      <td class="border border-gray-200 px-4 py-2">64px</td>
+      <td class="border border-gray-200 px-4 py-2">20px</td>
+    </tr>
+  </tbody>
+</table>
+</Unstyled>
+
+### **Shapes:**
+- **Circle** (`rounded-full`)  
+- **Square** (`rounded-md`)
+
+---
+
+## **Examples**
+
+### **Image Avatar**
+<Story name="Default" />
+
+### **With Initials**
+<Story of={AvatarStories.WithInitials} />
+
+### **With Status (Online)**
+<Story of={AvatarStories.WithStatusOnline} />
+
+### **Square Shape**
+<Story of={AvatarStories.SquareAvatar} />
+
+### **Icon Fallback**
+<Story of={AvatarStories.WithIconFallback} />
+
+---
+
+## **Usage Example**
+
+```tsx
+<Avatar src="https://i.pravatar.cc/300" size="md"
