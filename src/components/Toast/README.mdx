@@ -1,0 +1,30 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as ToastStories from './index.stories';
+
+<Meta of={ToastStories} />
+
+# Toast
+
+The **Toast component** provides feedback messages like **success, warning, error**, and **informational notifications**. It supports different **positions**, can be **dismissed manually**, or **auto-dismissed** after a duration.
+
+---
+
+## **Best Practices**
+✅ Keep toast messages **short and concise**.  
+✅ Use **`autoDismiss`** for temporary status updates.  
+✅ Use `variant` props to **indicate the type of feedback**.
+
+---
+
+<Primary />
+
+## Props
+
+<Controls />
+
+---
+
+## **Usage Example**
+
+```tsx
+<Toast message="This is a toast!" variant="success" position="bottom-right" />
