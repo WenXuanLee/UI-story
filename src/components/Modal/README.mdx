@@ -1,0 +1,95 @@
+import { Meta, Primary, Controls, Unstyled, Story } from '@storybook/blocks';
+import * as ModalStories from './index.stories';
+
+<Meta of={ModalStories} />
+
+# Modal
+
+The **Modal** component provides a flexible way to present information in a dialog overlay. It supports different sizes and a customizable header, body, and footer.
+
+## **Best Practices**
+
+1. Use **modals for focused actions**—avoid stacking multiple modals.
+2. Ensure the **modal content remains concise**.
+3. Add a **close button** and support **backdrop click to close** for better UX.
+
+---
+
+<Primary />
+
+## **Props**
+
+<Controls />
+
+---
+
+## **Modal Sizes**
+
+The Modal component supports three sizes (`sm`, `md`, `lg`), allowing flexibility for various content lengths.
+
+<Unstyled>
+<div class="overflow-x-auto">
+  <table class="min-w-full table-auto border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+        <th class="border border-gray-200 px-4 py-2 text-left">Size</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Width</th>
+        <th class="border border-gray-200 px-4 py-2 text-left">Usage</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700 text-sm">
+      <tr>
+        <td class="border border-gray-200 px-4 py-2"><code>sm</code></td>
+        <td class="border border-gray-200 px-4 py-2">320px</td>
+        <td class="border border-gray-200 px-4 py-2">Short confirmation dialogs, simple forms</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="border border-gray-200 px-4 py-2"><code>md</code></td>
+        <td class="border border-gray-200 px-4 py-2">480px</td>
+        <td class="border border-gray-200 px-4 py-2">Standard modal for most use cases</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-200 px-4 py-2"><code>lg</code></td>
+        <td class="border border-gray-200 px-4 py-2">640px</td>
+        <td class="border border-gray-200 px-4 py-2">Large modals for complex forms or detailed content</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</Unstyled>
+
+---
+
+## **Modal Composition**
+
+The Modal consists of the following parts:
+- **`Modal.Header`**: Displays the modal title and a close button.
+- **`Modal.Body`**: Contains the main content of the modal.
+- **`Modal.Footer`**: Contains actions like confirmation or cancellation.
+
+### **Usage Example**
+
+```tsx
+import { Modal } from './Modal';
+import { Button } from '../Button';
+import { useState } from 'react';
+
+const Example = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="md">
+        <Modal.Header title="Modal Title" onClose={() => setIsOpen(false)} />
+        <Modal.Body>
+          <p>This is the modal content. Add more text to make it scrollable and test the scroll behavior.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setIsOpen(false)}>Cancel</Button>
+          <Button variant="primary">Confirm</Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+};

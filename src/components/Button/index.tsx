@@ -84,6 +84,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         className={cn(buttonStyles({ variant, size, fullWidth, disabled, className }))}
         disabled={disabled}
+        onClick={onClick}
         {...props}
       >
         {/* Render icon and text based on iconPosition */}
