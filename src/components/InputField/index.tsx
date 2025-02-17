@@ -13,11 +13,14 @@ type InputProps = {
   label?: string;
   hintMessage?: string;
   id?: string;
+  value?: string | number;
+  className?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const InputField = forwardRef<HTMLInputElement, InputProps>(
   (
-    { size = "md", state = "default", placeholder, prefixIcon, suffixIcon, label, hintMessage, id, ...props },
+    { size = "md", state = "default", placeholder, prefixIcon, suffixIcon, label, hintMessage, id, value, className, onChange, ...props },
     ref
   ) => {
     return (
@@ -44,8 +47,11 @@ export const InputField = forwardRef<HTMLInputElement, InputProps>(
                   state,
                   hasPrefixIcon: !!prefixIcon,
                   hasSuffixIcon: !!suffixIcon,
-                })
+                }),
+                className,
               )}
+              value={value}
+              onChange={onChange}
               {...props}
             />
             {suffixIcon && <span className="absolute right-3 top-1/2 -translate-y-1/2">{suffixIcon}</span>}

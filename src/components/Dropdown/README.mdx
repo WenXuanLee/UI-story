@@ -1,0 +1,37 @@
+import { Meta, Primary, Controls, Story, Unstyled } from '@storybook/blocks';
+import * as DropdownStories from './index.stories';
+
+<Meta of={DropdownStories} />
+
+# Dropdown (Select)
+
+The Dropdown component allows users to select an option from a list. It supports **single select**, **multi-select**, **search**, and **custom rendering**.
+
+## **Best Practices**
+1. **Use `multiSelect` for checkable multi-option selection.**
+2. **Use the `searchable` option** for large lists.
+3. **Always provide meaningful placeholder text.**
+4. **Ensure proper handling of disabled options.**
+
+---
+
+<Primary />
+
+## **Props**
+
+<Controls />
+
+---
+
+## **Dropdown Usage Examples**
+### **Single Select**
+<Story of={DropdownStories.Default} />
+
+### **Multi-Select**
+<Story of={DropdownStories.MultiDropdown} />
+
+### **With Search**
+<Story of={DropdownStories.Searchable} />
+
+### **Custom Option Rendering**
+<Story of={DropdownStories.CustomRender} />

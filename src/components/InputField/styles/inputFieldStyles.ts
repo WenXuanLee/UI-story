@@ -5,15 +5,13 @@ export const inputFieldStyles = cva(
     "w-full",
     "rounded-lg",
     "focus:outline-none",
-    "transition-all",
-    "duration-200",
   ],
   {
     variants: {
       state: {
-        default: "border border-neutral-300 bg-white focus:ring-2 focus:ring-primary-300",
-        error: "border border-error-500 bg-white focus:ring-2 focus:ring-error-300",
-        success: "border border-success-500 bg-white focus:ring-2 focus:ring-success-300",
+        default: "border border-neutral-300 bg-white focus:border-primary-500",
+        error: "border border-error-500 bg-white focus:border-error-500",
+        success: "border border-success-500 bg-white",
         disabled: "border border-neutral-200 bg-neutral-100 text-neutral-400 cursor-not-allowed",
       },
       size: {
