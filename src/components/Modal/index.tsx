@@ -9,6 +9,7 @@ type ModalProps = {
   onClose: () => void;
   size?: "sm" | "md" | "lg";
   children: ReactNode;
+  bodyContent?: string; // for storybook mock prop
 };
 
 const ModalComponent: React.FC<ModalProps> = ({ isOpen, onClose, size = "md", children }) => {

@@ -40,7 +40,7 @@ const typographyStyles = cva(
 );
 
 type TypographyProps = {
-  as?: HTMLElement; // Allows dynamic HTML tags
+  as?: HTMLElement | string; // Allows dynamic HTML tags
 } & React.HTMLAttributes<HTMLElement> &
   VariantProps<typeof typographyStyles>;
 

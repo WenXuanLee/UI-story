@@ -21,7 +21,6 @@ const meta: Meta<typeof Chip> = {
         "error-outlined",
       ],
     },
-    state: { control: "select", options: ["default", "focus", "disabled"] },
     removable: { control: "boolean" },
   },
 };
