@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "test": "tsc --project tsconfig.app.json && vite build",
+    "test": "jest",
     "build-storybook": "storybook build",
     "test:watch": "jest --watch"
   },

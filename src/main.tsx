@@ -8,7 +8,7 @@ export * from "./components/Tooltips";
 export * from "./components/Toast";
 export * from "./components/RadioButton";
 export * from "./components/InputField";
-export * from "./components/Chips";
+export * from "./components/Chips/Chips";
 
 // Optional: Exporting utility functions (if any)
 export * from "./utils/style-utility-cn";

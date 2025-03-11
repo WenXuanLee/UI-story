@@ -1,6 +1,6 @@
-import { forwardRef, ReactNode, useMemo } from "react";
+import { forwardRef, useCallback, ReactNode, useMemo } from "react";
 import { cn } from "@/utils/style-utility-cn";
-import { chipStyles } from "./styles";
+import { chipStyles } from "./Chips.styles";
 import { AiOutlineClose } from "react-icons/ai"; // Using react-icons for close button
 
 type ChipProps = {
@@ -27,6 +27,11 @@ type ChipProps = {
 export const Chip = forwardRef<HTMLDivElement, ChipProps>(
   ({ label, size = "md", variant, isDisabled, icon, removable, onClick, onRemove }, ref) => {
     
+    const handleClick = useCallback(() => {
+      if (isDisabled) return;
+      onClick?.();
+    }, [isDisabled, onClick]);
+  
     // Memoizing text size and icon size to optimize re-renders
     const textSize = useMemo(() => {
       return size === "sm" ? "text-sm" : size === "lg" ? "text-lg" : "text-base";
@@ -43,10 +48,10 @@ export const Chip = forwardRef<HTMLDivElement, ChipProps>(
           chipStyles({ size, variant, isDisabled }),
           "gap-2 px-2 flex items-center cursor-pointer"
         )}
-        onClick={onClick}
+        onClick={handleClick}
       >
         {/* Prefix Icon (Avatar or Category Icon) */}
-        {icon && <span className={cn("flex items-center", textSize)}>{icon}</span>}
+        {icon && <span data-testid="chip-icon" className={cn("flex items-center", textSize)}>{icon}</span>}
 
         {/* Chip Label */}
         <span className={textSize}>{label}</span>
