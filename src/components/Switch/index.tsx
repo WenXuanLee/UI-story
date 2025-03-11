@@ -1,7 +1,7 @@
 import { useState, forwardRef, useMemo } from "react";
 import { cn } from "@/utils/style-utility-cn";
 import { switchStyles, knobStyles } from "./styles";
-import Typography from "@/components/Typography"; // Import Typography
+import { Typography } from "@/components/Typography"; // Import Typography
 
 type SwitchProps = {
   checked?: boolean; // Controlled state

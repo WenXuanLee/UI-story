@@ -1,5 +1,5 @@
 import { Meta, StoryFn, StoryObj } from "@storybook/react";
-import { Button } from "./";
+import { Button } from "./index";
 import { FiCheck } from "react-icons/fi";
 
 const meta: Meta<typeof Button> = {

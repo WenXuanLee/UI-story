@@ -68,4 +68,3 @@ export const InputField = forwardRef<HTMLInputElement, InputProps>(
   }
 );
 
-export default InputField;
