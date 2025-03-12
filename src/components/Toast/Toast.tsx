@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineCheckCircle, AiOutlineInfoCircle, AiOutlineCloseCircle, AiOutlineWarning } from "react-icons/ai";
-import { toastStyles } from "./styles";
+import { toastStyles } from "./Toast.styles";
 import { cn } from "@/utils/style-utility-cn";
 
 type ToastProps = {
@@ -38,7 +38,7 @@ export const Toast: React.FC<ToastProps> = ({
   const positionClass = getPositionClass(position);
 
   return (
-    <div className={cn("fixed z-50", positionClass)}>
+    <div data-testid="toast-wrapper" className={cn("fixed z-50", positionClass)}>
       <div className={cn(toastStyles({ variant }))}>
         <span className="w-5 h-5">{getIcon(variant)}</span>
         <p>{message}</p>
@@ -71,12 +71,12 @@ const getPositionClass = (position: ToastProps["position"]) => {
 const getIcon = (variant: ToastProps["variant"]) => {
   switch (variant) {
     case "success":
-      return <AiOutlineCheckCircle size={20} className="text-success-800" />;
+      return <AiOutlineCheckCircle data-testid="toast-icon-success" size={20} className="text-success-800" />;
     case "warning":
-      return <AiOutlineWarning size={20} className="text-warning-800" />;
+      return <AiOutlineWarning data-testid="toast-icon-warning" size={20} className="text-warning-800" />;
     case "error":
-      return <AiOutlineCloseCircle size={20} className="text-error-800" />;
+      return <AiOutlineCloseCircle data-testid="toast-icon-error" size={20} className="text-error-800" />;
     default:
-      return <AiOutlineInfoCircle size={20} className="text-primary-800" />;
+      return <AiOutlineInfoCircle data-testid="toast-icon-info" size={20} className="text-primary-800" />;
   }
 };
