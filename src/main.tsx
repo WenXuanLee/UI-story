@@ -4,7 +4,7 @@ export * from "./components/Dropdown";
 export * from "./components/Modal";
 export * from "./components/Avatar";
 export * from "./components/Switch/Switch";
-export * from "./components/Tooltips";
+export * from "./components/Tooltips/Tooltips";
 export * from "./components/Toast/Toast";
 export * from "./components/RadioButton/RadioButton";
 export * from "./components/InputField";

@@ -1,6 +1,6 @@
 import { useState, useRef, ReactNode } from "react";
 import { cn } from "@/utils/style-utility-cn";
-import { tooltipStyles, arrowStyles } from "./styles";
+import { tooltipStyles, arrowStyles } from "./Tooltips.styles";
 
 type TooltipProps = {
   content: string | ReactNode;
@@ -22,6 +22,7 @@ export const Tooltip = ({ content, position = "top", maxWidth, children }: Toolt
       {children}
       {visible && (
         <div
+          data-testid="tooltip-wrapper"
           ref={tooltipRef}
           className={cn(tooltipStyles({ position: position }))}
           style={{ maxWidth: maxWidth ? `${maxWidth}px` : "200px" }} // ✅ Apply max width dynamically
