@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RadioButton } from "./index";
+import { RadioButton } from "./RadioButton";
 
 type RadioGroupProps = {
   name: string;

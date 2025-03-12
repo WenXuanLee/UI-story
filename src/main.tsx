@@ -6,7 +6,7 @@ export * from "./components/Avatar";
 export * from "./components/Switch";
 export * from "./components/Tooltips";
 export * from "./components/Toast";
-export * from "./components/RadioButton";
+export * from "./components/RadioButton/RadioButton";
 export * from "./components/InputField";
 export * from "./components/Chips/Chips";
 

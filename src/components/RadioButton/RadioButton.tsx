@@ -1,6 +1,6 @@
 import { forwardRef, useMemo } from "react";
 import { cn } from "@/utils/style-utility-cn";
-import { radioButtonStyles } from "./styles";
+import { radioButtonStyles } from "./RadioButton.styles";
 
 type RadioButtonProps = {
   id?: string;
@@ -27,15 +27,19 @@ export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
           isDisabled && "opacity-50 cursor-not-allowed"
         )}
       >
-        {/* Radio Input */}
+        {/* Radio Infput */}
         <input
           id={id}
+          data-testid="radio-button"
           type="radio"
           name={name}
           value={value}
           ref={ref}
           checked={checked}
+          role="radio"
           disabled={isDisabled}
+          aria-disabled={isDisabled}
+          aria-checked={checked}
           onChange={(event) => onChange?.(event.target.value)}
           className={cn(
             radioButtonStyles({ size, state }),
