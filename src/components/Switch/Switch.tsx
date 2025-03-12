@@ -1,6 +1,6 @@
 import { useState, forwardRef, useMemo } from "react";
 import { cn } from "@/utils/style-utility-cn";
-import { switchStyles, knobStyles } from "./styles";
+import { switchStyles, knobStyles } from "./Switch.styles";
 import { Typography } from "@/components/Typography"; // Import Typography
 
 type SwitchProps = {
@@ -36,6 +36,7 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
         <button
           ref={ref}
           role="switch"
+          data-testid="switch-button"
           aria-checked={internalChecked}
           aria-disabled={disabled}
           onClick={toggleSwitch}

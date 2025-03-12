@@ -6,4 +6,4 @@ export * from './Typography';
 export * from './Checkbox/Checkbox';
 export * from './RadioButton/RadioButton';
 export * from './Chips/Chips';
-export * from './Switch';
+export * from './Switch/Switch';

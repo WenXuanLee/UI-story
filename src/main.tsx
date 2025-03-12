@@ -3,7 +3,7 @@ export * from "./components/Button/Button.test";
 export * from "./components/Dropdown";
 export * from "./components/Modal";
 export * from "./components/Avatar";
-export * from "./components/Switch";
+export * from "./components/Switch/Switch";
 export * from "./components/Tooltips";
 export * from "./components/Toast";
 export * from "./components/RadioButton/RadioButton";
