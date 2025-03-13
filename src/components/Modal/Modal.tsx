@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { modalStyles } from "./styles";
+import { modalStyles } from "./Modal.styles";
 import { ModalHeader } from "./components/ModalHeader";
 import { ModalBody } from "./components/ModalBody";
 import { ModalFooter } from "./components/ModalFooter";
@@ -23,6 +23,7 @@ const ModalComponent: React.FC<ModalProps> = ({ isOpen, onClose, size = "md", ch
 
   return (
     <div
+      data-testid="dialog-wrapper"
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
       onClick={handleBackdropClick}
     > 

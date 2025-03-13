@@ -1,7 +1,7 @@
 // src/main.tsx
 export * from "./components/Button/Button.test";
 export * from "./components/Dropdown/Dropdown";
-export * from "./components/Modal";
+export * from "./components/Modal/Modal";
 export * from "./components/Avatar/Avatar";
 export * from "./components/Switch/Switch";
 export * from "./components/Tooltips/Tooltips";
