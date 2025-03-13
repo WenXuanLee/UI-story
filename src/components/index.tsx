@@ -2,7 +2,7 @@
 
 export * from './Button/Button.test';
 export * from './InputField';
-export * from './Typography';
+export * from './Typography/Typography';
 export * from './Checkbox/Checkbox';
 export * from './RadioButton/RadioButton';
 export * from './Chips/Chips';
