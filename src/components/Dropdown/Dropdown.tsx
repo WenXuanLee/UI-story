@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useCallback, useState } from "react";
-import { selectContainerStyles, dropdownStyles, optionStyles } from "./styles";
+import { selectContainerStyles, dropdownStyles, optionStyles } from "./Dropdown.styles";
 import { AiOutlineClose } from "react-icons/ai"; // Importing a close icon from react-icons
 import { InputField } from '../InputField/InputField'; // Importing the InputField component
 
