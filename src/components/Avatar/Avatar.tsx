@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { AiOutlineUser } from "react-icons/ai";
-import { avatarStyles } from "./styles";
+import { avatarStyles } from "./Avatar.styles";
 import { cn } from "@/utils/style-utility-cn";
 import { StatusIndicator } from "./StatusIndicator";
 
@@ -8,7 +8,7 @@ type AvatarProps = {
   src?: string;
   alt?: string;
   initials?: string;
-  status?: "online" | "offline" | null;
+  status?: "online" | "offline" | "idle" | "busy" | null;
   size?: "sm" | "md" | "lg";
   shape?: "circle" | "square";
 };
@@ -42,12 +42,12 @@ export const Avatar: React.FC<AvatarProps> = ({
     if (initials) {
       return <span className="font-medium text-neutral-700">{initialsText}</span>;
     }
-    return <AiOutlineUser size={iconSizeMap[size]} className="text-neutral-700" />;
+    return <AiOutlineUser data-testid="avatar-default-icon" size={iconSizeMap[size]} className="text-neutral-700" />;
   };
 
   return (
     <div className="relative w-fit h-fit">
-      <div className={cn(avatarStyles({ size, shape }))}>
+      <div data-testid="avatar-wrapper" className={cn(avatarStyles({ size, shape }))}>
         {renderContent()}
       </div>
       {status && (

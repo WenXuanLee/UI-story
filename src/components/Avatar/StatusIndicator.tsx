@@ -24,13 +24,11 @@ const statusMap = {
   idle: "bg-warning-500",
 }
 
-
-
 export const StatusIndicator: React.FC<StatusIndicatorProps> = ({ status, size = "md", shape = "circle" }) => {
   return <span className={cn(
     "absolute rounded-full border-2 border-white", // Add a white border to blend with the avatar edge
     sizeMap[size],
     positionMap[shape],
     statusMap[status]
-  )} />;
+  )} data-testid="status-indicator"  />;
 };
