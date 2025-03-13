@@ -1,15 +1,15 @@
 import '@testing-library/jest-dom';
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Tooltip } from "./Tooltips"; // Ensure correct import path
+import { Tooltips } from "./Tooltips"; // Ensure correct import path
 
 describe("Tooltip Component", () => {
 
   test("renders tooltip content only on hover", async () => {
     render(
-      <Tooltip content="Tooltip text">
+      <Tooltips content="Tooltip text">
         <button>Hover me</button>
-      </Tooltip>
+      </Tooltips>
     );
 
     expect(screen.queryByText("Tooltip text")).not.toBeInTheDocument(); // ✅ Tooltip should be hidden initially
@@ -23,9 +23,9 @@ describe("Tooltip Component", () => {
 
   test("applies correct position classes", async () => {
     render(
-      <Tooltip content="Tooltip on top" position="top">
+      <Tooltips content="Tooltip on top" position="top">
         <button>Hover me</button>
-      </Tooltip>
+      </Tooltips>
     );
 
     await userEvent.hover(screen.getByText("Hover me"));
@@ -36,9 +36,9 @@ describe("Tooltip Component", () => {
 
   test("applies max width if provided", async () => {
     render(
-      <Tooltip content="Tooltip with max width" maxWidth={300}>
+      <Tooltips content="Tooltip with max width" maxWidth={300}>
         <button>Hover me</button>
-      </Tooltip>
+      </Tooltips>
     );
 
     await userEvent.hover(screen.getByText("Hover me"));
@@ -49,9 +49,9 @@ describe("Tooltip Component", () => {
 
   test("supports JSX as tooltip content", async () => {
     render(
-      <Tooltip content={<span data-testid="tooltip-content">JSX Tooltip</span>}>
+      <Tooltips content={<span data-testid="tooltip-content">JSX Tooltip</span>}>
         <button>Hover me</button>
-      </Tooltip>
+      </Tooltips>
     );
 
     await userEvent.hover(screen.getByText("Hover me"));

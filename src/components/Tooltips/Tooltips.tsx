@@ -1,15 +1,15 @@
-import { useState, useRef, ReactNode } from "react";
+import React, { useState, useRef, ReactNode } from "react";
 import { cn } from "@/utils/style-utility-cn";
 import { tooltipStyles, arrowStyles } from "./Tooltips.styles";
 
-type TooltipProps = {
+type TooltipsProps = {
   content: string | ReactNode;
   position?: "top" | "bottom" | "left" | "right";
   maxWidth?: number; // Allow users to set a max width
   children: ReactNode;
 };
 
-export const Tooltip = ({ content, position = "top", maxWidth, children }: TooltipProps) => {
+export const Tooltips: React.FC<TooltipsProps> = ({ content, position = "top", maxWidth, children }) => {
   const [visible, setVisible] = useState(false);
   const tooltipRef = useRef<HTMLDivElement>(null)
 

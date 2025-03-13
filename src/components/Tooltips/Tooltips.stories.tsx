@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Tooltip } from "./Tooltips";
+import { Tooltips } from "./Tooltips";
 
-const meta: Meta<typeof Tooltip> = {
-  title: "Components/Tooltip",
-  component: Tooltip,
+const meta: Meta<typeof Tooltips> = {
+  title: "Components/Tooltips",
+  component: Tooltips,
   argTypes: {
     content: { control: "text" },
     position: { control: "select", options: ["top", "bottom", "left", "right"] },
@@ -12,7 +12,7 @@ const meta: Meta<typeof Tooltip> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Tooltip>;
+type Story = StoryObj<typeof Tooltips>;
 
 // ✅ Tooltip on Top (Default)
 export const Default: Story = {
