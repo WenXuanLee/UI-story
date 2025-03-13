@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { InputField } from "./";
+import { InputField } from "./InputField";
 import { Search01Icon } from "hugeicons-react";
 
 

@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 export * from './Button/Button.test';
-export * from './InputField';
+export * from './InputField/InputField';
 export * from './Typography/Typography';
 export * from './Checkbox/Checkbox';
 export * from './RadioButton/RadioButton';

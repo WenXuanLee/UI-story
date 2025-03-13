@@ -28,7 +28,7 @@ export const InputField = forwardRef<HTMLInputElement, InputProps>(
         <div>
           {/* Label */}
           {label && (
-            <label htmlFor={id} className={cn(labelStyles({ size, state }))}>
+            <label data-testid="input-label" htmlFor={id} className={cn(labelStyles({ size, state }))}>
               {label}
             </label>
           )}
@@ -37,6 +37,7 @@ export const InputField = forwardRef<HTMLInputElement, InputProps>(
           <div className="relative">
             {prefixIcon && <span className="absolute left-3 top-1/2 -translate-y-1/2">{prefixIcon}</span>}
             <input
+              data-testid="input-field"
               id={id}
               ref={ref}
               placeholder={placeholder}
@@ -61,7 +62,7 @@ export const InputField = forwardRef<HTMLInputElement, InputProps>(
 
         {/* Validation / Hint Message */}
         {hintMessage && (
-          <span className={cn(hintMsgStyles({ state }))}>{hintMessage}</span>
+          <span data-testid="input-hint-message" className={cn(hintMsgStyles({ state }))}>{hintMessage}</span>
         )}
       </div>
     );

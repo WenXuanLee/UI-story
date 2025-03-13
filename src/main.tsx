@@ -7,7 +7,7 @@ export * from "./components/Switch/Switch";
 export * from "./components/Tooltips/Tooltips";
 export * from "./components/Toast/Toast";
 export * from "./components/RadioButton/RadioButton";
-export * from "./components/InputField";
+export * from "./components/InputField/InputField";
 export * from "./components/Chips/Chips";
 
 // Optional: Exporting utility functions (if any)
